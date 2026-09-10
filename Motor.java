@@ -37,10 +37,10 @@ public class Motor {
     }
 
     public void setKecepatan(int kecepatan) {
-        if (kecepatan > 100) {
-            System.out.println("Kecepatan Maksmimal adalah 100");
-        } else {
-            this.kecepatan = kecepatan;
-        }
+    if (kecepatan < 0) {
+        System.out.println("Kecepatan tidak boleh negatif");
+    } else {
+        this.kecepatan = kecepatan;
     }
+}
 }
