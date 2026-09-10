@@ -36,10 +36,12 @@ public class Anggota {
     }
 
     public void angsur(int uang) {
-        if (uang > jumlahPinjaman) {
-            System.out.println("Maaf, angsuran melebihi jumlah pinjaman");
-        } else {
-            jumlahPinjaman -= uang;
-        }
+    if (uang < jumlahPinjaman * 0.1) {
+        System.out.println("Maaf, angsuran harus 10% dari jumlah pinjaman");
+    } else if (uang > jumlahPinjaman) {
+        System.out.println("Maaf, angsuran melebihi jumlah pinjaman");
+    } else {
+        jumlahPinjaman -= uang;
     }
+}
 }
